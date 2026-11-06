@@ -32,6 +32,8 @@ class SocialNetwork:
     def add_person(self, name):
         if name not in self.people:
             self.people[name] = Person(name)
+        elif name in self.people:
+            print(f"{name} already exists within the network.")
 
     def add_friendship(self, person1_name, person2_name):
         if person1_name in self.people and person2_name in self.people:
@@ -58,23 +60,22 @@ def main():
 
     network.add_person("Alex")
     network.add_person("Jordan")
-    print(network.people)
-
     network.add_person("Morgan")
     network.add_person("Taylor")
     network.add_person("Casey")
     network.add_person("Riley")
+    network.add_person("Morgan") # Duplicate person test
 
     network.add_friendship("Alex", "Jordan")
     network.add_friendship("Alex", "Morgan")
     network.add_friendship("Jordan", "Taylor")
-    network.add_friendship("Jordan", "Johnny")
+    network.add_friendship("Jordan", "Johnny") # Johnny does not exist in the network
     network.add_friendship("Morgan", "Casey")
     network.add_friendship("Taylor", "Riley")
     network.add_friendship("Casey", "Riley")
     network.add_friendship("Morgan", "Riley")
     network.add_friendship("Alex", "Taylor")
-    network.add_friendship("Taylor", "Alex")
+    network.add_friendship("Taylor", "Alex") # Duplicate friends test
 
     network.print_network()
 
