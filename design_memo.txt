@@ -1,0 +1,8 @@
+A graph is the correct data structure for a social network because it allows for nodes to be connected to other nodes in a web-like structure, like roads connecting cities. 
+Relationships are bidirectional, so the connections between people go both ways rather than one being a child of another, like how they are in trees. Graphs also allow for 
+multiple connections to exist between nodes, so there is no limit on how many nodes can be connected, in this case, how many friends people can have. A list would not work 
+for this because there would be no way to see who is connected to whom in the list. A tree has a similar structure to a graph; however, we do not want the hierarchical 
+structure of a tree, only its non-linear structure in order to connect nodes in a web. A graph is very similar to a tree, but it allows for a non-hierarchical format and
+there is no limit on how many connections each node can have. When adding friends and printing the network, both must go through if statements or loops which can make
+the program take more time to run; however, with the current size of the network this is okay. If the network were to be upscaled, a graph using an adjacency matrix
+would be more efficient. It would be more memory costly in the beginning but if the network becomes very large, it would be much faster than the current graph.
